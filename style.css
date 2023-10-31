@@ -1,0 +1,12 @@
+form {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 10rem;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}

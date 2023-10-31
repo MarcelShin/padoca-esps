@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Padoca da Vila</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>Padoca da Vila</h1>
+    <p>Olá, seja bem vindo a Padoca da Vila</p>
+
+    <form>
+      <label for="name">Nome</label>
+      <input type="text" name="name" id="name" />
+
+      <label for="price">Preço</label>
+      <input type="text" name="price" id="price" />
+
+      <label for="qtd">Quantidade</label>
+      <input type="number" name="qtd" id="qtd" />
+
+      <label for="description">Descrição</label>
+      <textarea
+        name="description"
+        id="description"
+        cols="30"
+        rows="10"
+      ></textarea>
+
+      <button type="button" id="register">Cadastrar</button>
+    </form>
+
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Descrição</th>
+          </tr>
+        </thead>
+  
+        <tbody id="product-rows">
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    <script src="./script.js"></script>
+  </body>
+</html>
