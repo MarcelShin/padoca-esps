@@ -11,6 +11,7 @@ function registerProduct() {
   const description = document.querySelector("#description").value;
 
   const product = {
+    id: products.length + 1,
     name,
     price,
     qtd,
@@ -19,11 +20,11 @@ function registerProduct() {
 
   products.push(product);
 
-  console.log(products);
   showProducts();
 }
 
 function showProducts() {
+  console.log(products);
   const productRows = document.querySelector("#product-rows");
   productRows.innerHTML = "";
   for (let i = 0; i < products.length; i++) {
@@ -33,7 +34,27 @@ function showProducts() {
         <td>${products[i].price}</td>
         <td>${products[i].qtd}</td>
         <td>${products[i].description}</td>
+        <td><a onclick="removeProduct(${products[i].id})">Excluir</a></td>
       </tr>
     `;
   }
+}
+
+function findProductById(id) {
+  return products.find((product) => product.id === id);
+  
+}
+
+function removeProduct(id) {
+  const productFinder = findProductById(id);
+  products.splice(products.indexOf(productFinder), 1);
+
+  // for(let i = 0; i < products.length; i++) {
+  //   if(products[i].id === id) {
+  //     products.splice(i, 1)
+  //     break
+  //   }
+  // }
+
+  showProducts();
 }

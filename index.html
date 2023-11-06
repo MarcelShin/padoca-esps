@@ -12,13 +12,13 @@
 
     <form>
       <label for="name">Nome</label>
-      <input type="text" name="name" id="name" />
+      <input type="text" name="name" id="name" value="Pao"/>
 
       <label for="price">Preço</label>
-      <input type="text" name="price" id="price" />
+      <input type="text" name="price" id="price" value="2,00"/>
 
       <label for="qtd">Quantidade</label>
-      <input type="number" name="qtd" id="qtd" />
+      <input type="number" name="qtd" id="qtd" value="5"/>
 
       <label for="description">Descrição</label>
       <textarea
@@ -26,6 +26,7 @@
         id="description"
         cols="30"
         rows="10"
+        
       ></textarea>
 
       <button type="button" id="register">Cadastrar</button>
@@ -39,11 +40,12 @@
             <th>Preço</th>
             <th>Quantidade</th>
             <th>Descrição</th>
+            <th>Ações</th>
           </tr>
         </thead>
   
         <tbody id="product-rows">
-          
+          <!-- Dentro da tag -->
         </tbody>
       </table>
     </section>
