@@ -4,21 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Padoca da Vila</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Padoca da Vila</h1>
-    <p>Olá, seja bem vindo a Padoca da Vila</p>
+    <div class="text">
+      <h1>Padoca da Vila</h1>
+      <p>Olá, seja bem vindo a Padoca da Vila</p>
+    </div>
 
-    <form>
+    <form id="insert-form" class="display-flex">
       <label for="name">Nome</label>
-      <input type="text" name="name" id="name" value="Pao"/>
+      <input type="text" name="name" id="name" />
 
       <label for="price">Preço</label>
-      <input type="text" name="price" id="price" value="2,00"/>
+      <input type="text" name="price" id="price" />
 
       <label for="qtd">Quantidade</label>
-      <input type="number" name="qtd" id="qtd" value="5"/>
+      <input type="number" name="qtd" id="qtd" />
 
       <label for="description">Descrição</label>
       <textarea
@@ -26,13 +28,12 @@
         id="description"
         cols="30"
         rows="10"
-        
       ></textarea>
 
       <button type="button" id="register">Cadastrar</button>
     </form>
 
-    <section>
+    <section id="list-products">
       <table>
         <thead>
           <tr>
@@ -43,13 +44,33 @@
             <th>Ações</th>
           </tr>
         </thead>
-  
+
         <tbody id="product-rows">
           <!-- Dentro da tag -->
         </tbody>
       </table>
     </section>
-    
+
+    <form id="update-form" class="display-none">
+      <label for="name">Nome</label>
+      <input type="text" name="name" id="name-update" />
+
+      <label for="price">Preço</label>
+      <input type="text" name="price" id="price-update" />
+
+      <label for="qtd">Quantidade</label>
+      <input type="number" name="qtd" id="qtd-update" />
+
+      <label for="description">Descrição</label>
+      <textarea
+        name="description"
+        id="description-update"
+        cols="30"
+        rows="10"
+      ></textarea>
+
+      <button type="button" id="update">Atualizar</button>
+    </form>
 
     <script src="./script.js"></script>
   </body>
